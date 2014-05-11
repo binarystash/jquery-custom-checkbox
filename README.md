@@ -40,5 +40,8 @@ In your webpage:
 
 3. Customize the appearance by editing custom-checkbox.css
 
+##Compatibility
+Tested on IE8; latest versions of Firefox and Chrome
+
 ##Support
 Report bugs at https://github.com/binarystash/jquery-custom-checkbox/issues.
