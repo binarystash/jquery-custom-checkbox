@@ -35,7 +35,7 @@ In your webpage:
 2. Call the plugin.
 
 	```javascript
-	jQuery('input[type="checkbox"]).customCheckbox();
+	jQuery('input[type="checkbox"]').customCheckbox();
 	```
 
 3. Customize the appearance by editing custom-checkbox.css
