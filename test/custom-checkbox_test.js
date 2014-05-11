@@ -67,9 +67,9 @@
     $('#qunit-fixture label').eq(1).trigger('click');
     $('.custom-checkbox-display').eq(2).trigger('click');
 
-    strictEqual($("#qunit-fixture .custom-checkbox-display").eq(0).hasClass("checked"), false, 'should remove "checked" to dummy 1');
-    strictEqual($("#qunit-fixture .custom-checkbox-display").eq(1).hasClass("checked"), false, 'should remove "checked" to dummy 2');
-    strictEqual($("#qunit-fixture .custom-checkbox-display").eq(2).hasClass("checked"), false, 'should remove "checked" to dummy 3');
+    strictEqual($("#qunit-fixture .custom-checkbox-display").eq(0).hasClass("checked"), false, 'should remove "checked" from dummy 1');
+    strictEqual($("#qunit-fixture .custom-checkbox-display").eq(1).hasClass("checked"), false, 'should remove "checked" from dummy 2');
+    strictEqual($("#qunit-fixture .custom-checkbox-display").eq(2).hasClass("checked"), false, 'should remove "checked" from dummy 3');
   });
 
   test('activate checkboxes', function() {

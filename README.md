@@ -2,20 +2,20 @@
 
 # Custom Checkbox
 
-Custom Checkbox is a jQuery plugin for customizing the appearance of checkboxes
+Custom Checkbox is a jQuery plugin for customizing the appearance of checkboxes.
 
 ## Demo
 
 Play with a [fiddle](http://jsfiddle.net/binarystash/B32wj/).
 
-## Getting Started
+## Installation
 
 Download the [production version][min] or the [development version][max].
 
 [min]: https://raw.github.com/binarystash/jquery-custom-checkbox/master/dist/jquery.custom-checkbox.min.js
 [max]: https://raw.github.com/binarystash/jquery-custom-checkbox/master/dist/jquery.custom-checkbox.js
 
-## Installation
+In your webpage:
 
 ```html
 <script src="jquery.js"></script>
@@ -32,12 +32,10 @@ Download the [production version][min] or the [development version][max].
     <input id="third" type="checkbox"/><label>Third</label>
     ```
 
-2. Call the plugin
+2. Call the plugin.
 
 	```javascript
-	jQuery(function($) {
-	  $('input[type="checkbox"]'').customCheckbox();
-	});
+	jQuery('input[type="checkbox"]).customCheckbox();
 	```
 
 3. Customize the appearance by editing custom-checkbox.css
