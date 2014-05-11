@@ -1,11 +1,6 @@
-/*
- * Custom Checkbox
- * 
- *
- * Copyright (c) 2014 BinaryStash
- * Licensed under the MIT license.
- */
-
+/*! custom-checkbox - v1.0.0 - 2014-05-11
+* https://github.com/binarystash/custom-checkbox
+* Copyright (c) 2014 BinaryStash; Licensed MIT */
 (function ($) {
 
   $.fn.customCheckbox = function() {
