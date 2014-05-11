@@ -1,0 +1,18 @@
+.custom-checkbox {
+	display:none;
+}
+
+.custom-checkbox-display {
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+	width:20px;
+	height:20px;
+	margin:0 3px;
+	display:inline-block;
+	cursor:pointer;
+}
+
+.custom-checkbox-display.checked {
+	background:#e7a61a;
+}

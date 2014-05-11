@@ -1,0 +1,28 @@
+{
+  "name": "custom-checkbox",
+  "title": "Custom Checkbox",
+  "description": "Custom Checkbox is a jQuery plugin for customizing the appearance of checkboxes",
+  "version": "1.0.0",
+  "homepage": "https://github.com/binarystash/jquery-custom-checkbox.git",
+  "author": {
+    "name": "BinaryStash",
+    "url": "https://github.com/binarystash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binarystash/jquery-custom-checkbox.git"
+  },
+  "bugs": "",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "~1.8.3"
+  },
+  "keywords": [
+    "jquery-plugin"
+  ]
+}
