@@ -45,7 +45,7 @@
       reset.each( function(ri,rv) {
           if ( !$(rv).hasClass("custom-checkbox-aware") ) {
               $(rv).addClass("custom-checkbox-aware");
-              $(rv).click( function(e) {
+              $(rv).click( function() {
                   form.find(".custom-checkbox:checked").trigger("click");
               });
           }
