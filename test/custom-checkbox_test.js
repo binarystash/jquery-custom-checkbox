@@ -37,7 +37,7 @@
     expect(1);
     
     this.elems.customCheckbox();
-    strictEqual($('.custom-checkbox-display').length, 3, 'should create dummies');
+    strictEqual($('.custom-checkbox-display').length, 4, 'should create dummies');
   });
 
   test('add classes', function() {
@@ -83,6 +83,17 @@
     strictEqual($("#qunit-fixture .custom-checkbox-display").eq(0).hasClass("checked"), false, 'should remove "checked" from dummy 1');
     strictEqual($("#qunit-fixture .custom-checkbox-display").eq(1).hasClass("checked"), false, 'should remove "checked" from dummy 2');
     strictEqual($("#qunit-fixture .custom-checkbox-display").eq(2).hasClass("checked"), false, 'should remove "checked" from dummy 3');
+  });
+  
+  test('recognize "checked" attribute', function() {
+    expect(4);
+    
+    this.elems.customCheckbox();
+
+    strictEqual($("#qunit-fixture .custom-checkbox-display").eq(0).hasClass("checked"), false, 'must not be checked');
+	strictEqual($("#qunit-fixture .custom-checkbox-display").eq(1).hasClass("checked"), false, 'must not be checked');
+	strictEqual($("#qunit-fixture .custom-checkbox-display").eq(2).hasClass("checked"), false, 'must not be checked');
+	strictEqual($("#qunit-fixture .custom-checkbox-display").eq(3).hasClass("checked"), true, 'must be checked');
   });
 
 
