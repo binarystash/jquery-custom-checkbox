@@ -1,25 +1,9 @@
-/*
- * Custom Checkbox
- * 
- *
- * Copyright (c) 2014 BinaryStash
- * Licensed under the MIT license.
- */
-
+/*! custom-checkbox - v1.0.1 - 2015-02-14
+* https://github.com/binarystash/custom-checkbox
+* Copyright (c) 2015 BinaryStash; Licensed MIT */
 (function ($) {
 
   $.fn.customCheckbox = function() {
-
-    function handleClick(actual,dummy) {
-       if ( dummy.hasClass("checked") ) {
-          actual.prop("checked",false);
-          dummy.removeClass("checked");
-        }
-        else {
-          actual.prop("checked",true);
-          dummy.addClass("checked");
-        }
-    }
 
     return this.each( function(i,v) {
 
@@ -30,29 +14,43 @@
 
       //Add classes
       $(v).addClass("custom-checkbox");
-
-      //Create dummy checkbox
-      $(v).after("<span class='custom-checkbox-display'></span>");
-      var dummy = $(v).next('.custom-checkbox-display');
-
-      //Check for label
-      var id = $(v).attr("id");
+        
+      //If not wrapped within label tags, wrap it
       var parentLabel = $(v).parent("label");
       var withinLabel = parentLabel.length;
-      var label = withinLabel ? parentLabel : $("label[for='"+id+"']");
 
-      //Add events
-      label.click( function(e) {
-        e.preventDefault();
-        handleClick($(v),dummy);
+      if ( !withinLabel ){
+          $(v).wrap("<label>");      
+      }  
+        
+      //Create dummy checkbox
+      var dummy = $("<span class='custom-checkbox-display'></span>");
+      $(v).after(dummy);
+        
+      //Add/remove classes to checkbox whenever state changes
+      $(v).change( function(e) {
+          var checkbox = $(e.currentTarget);
+          var state = checkbox.prop("checked");
+          if ( state ) {
+              dummy.addClass("checked");
+          }
+          else {
+              dummy.removeClass("checked");
+          }
+      });
+        
+      //Make reset button aware of the custom checkboxes
+      var form = $(v).parents("form");
+      var reset = form.find("input[type='reset']");
+      reset.each( function(ri,rv) {
+          if ( !$(rv).hasClass("custom-checkbox-aware") ) {
+              $(rv).addClass("custom-checkbox-aware");
+              $(rv).click( function(e) {
+                  form.find(".custom-checkbox:checked").trigger("click");
+              });
+          }
       });
 
-      if ( !withinLabel ) {
-        dummy.click( function(e) {
-          e.stopPropagation();
-          handleClick($(v),dummy);
-        });
-      }
 
     });
 

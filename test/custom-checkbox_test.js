@@ -45,9 +45,9 @@
     
     this.elems.customCheckbox();
 
-    $('.custom-checkbox-display').eq(0).trigger('click');
-    $('#qunit-fixture label').eq(1).trigger('click');
-    $('.custom-checkbox-display').eq(2).trigger('click');
+    $('.custom-checkbox').eq(0).trigger('click');
+    $('#qunit-fixture label').eq(2).trigger('click');
+    $('.custom-checkbox').eq(2).trigger('click');
 
     strictEqual($("#qunit-fixture .custom-checkbox-display").eq(0).hasClass("checked"), true, 'should add  "checked" to dummy 1');
     strictEqual($("#qunit-fixture .custom-checkbox-display").eq(1).hasClass("checked"), true, 'should add  "checked" to dummy 2');
@@ -59,49 +59,30 @@
     
     this.elems.customCheckbox();
 
-    $('.custom-checkbox-display').eq(0).trigger('click');
-    $('#qunit-fixture label').eq(1).trigger('click');
-    $('.custom-checkbox-display').eq(2).trigger('click');
+    $('.custom-checkbox').eq(0).trigger('click');
+    $('#qunit-fixture label').eq(2).trigger('click');
+    $('.custom-checkbox').eq(2).trigger('click');
 
-    $('.custom-checkbox-display').eq(0).trigger('click');
-    $('#qunit-fixture label').eq(1).trigger('click');
-    $('.custom-checkbox-display').eq(2).trigger('click');
+    $('.custom-checkbox').eq(0).trigger('click');
+    $('#qunit-fixture label').eq(2).trigger('click');
+    $('.custom-checkbox').eq(2).trigger('click');
 
     strictEqual($("#qunit-fixture .custom-checkbox-display").eq(0).hasClass("checked"), false, 'should remove "checked" from dummy 1');
     strictEqual($("#qunit-fixture .custom-checkbox-display").eq(1).hasClass("checked"), false, 'should remove "checked" from dummy 2');
     strictEqual($("#qunit-fixture .custom-checkbox-display").eq(2).hasClass("checked"), false, 'should remove "checked" from dummy 3');
   });
 
-  test('activate checkboxes', function() {
+  test('test reset button', function() {
     expect(3);
     
     this.elems.customCheckbox();
+	
+	$('.custom-checkbox').trigger('click');
+    $("input[type='reset']").trigger("click");
 
-    $('.custom-checkbox-display').eq(0).trigger('click');
-    $('#qunit-fixture label').eq(1).trigger('click');
-    $('.custom-checkbox-display').eq(2).trigger('click');
-
-    strictEqual($('#first').prop("checked"), true, 'should activate checkbox 1');
-    strictEqual($('#second').prop("checked"), true, 'should activate checkbox 2');
-    strictEqual($('#third').prop("checked"), true, 'should activate checkbox 3');
-  });
-
-  test('deactivate checkboxes', function() {
-    expect(3);
-    
-    this.elems.customCheckbox();
-
-    $('.custom-checkbox-display').eq(0).trigger('click');
-    $('#qunit-fixture label').eq(1).trigger('click');
-    $('.custom-checkbox-display').eq(2).trigger('click');
-
-    $('.custom-checkbox-display').eq(0).trigger('click');
-    $('#qunit-fixture label').eq(1).trigger('click');
-    $('.custom-checkbox-display').eq(2).trigger('click');
-
-    strictEqual($('#first').prop("checked"), false, 'should deactivate checkbox 1');
-    strictEqual($('#second').prop("checked"), false, 'should deactivate checkbox 2');
-    strictEqual($('#third').prop("checked"), false, 'should deactivate checkbox 3');
+    strictEqual($("#qunit-fixture .custom-checkbox-display").eq(0).hasClass("checked"), false, 'should remove "checked" from dummy 1');
+    strictEqual($("#qunit-fixture .custom-checkbox-display").eq(1).hasClass("checked"), false, 'should remove "checked" from dummy 2');
+    strictEqual($("#qunit-fixture .custom-checkbox-display").eq(2).hasClass("checked"), false, 'should remove "checked" from dummy 3');
   });
 
 
