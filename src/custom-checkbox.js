@@ -25,8 +25,11 @@
 			var withinLabel = parentLabel.length;
 
 			if ( !withinLabel ){
-				$(v).wrap("<label>");      
+				$(v).wrap("<label class='custom-checkbox-label'></label>");      
 			}  
+			else {
+				parentLabel.addClass('custom-checkbox-label');
+			}
 
 			//Create dummy checkbox
 			var dummy = $("<span class='custom-checkbox-display'></span>");

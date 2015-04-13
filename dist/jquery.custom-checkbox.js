@@ -1,4 +1,4 @@
-/*! custom-checkbox - v1.0.1 - 2015-02-14
+/*! custom-checkbox - v1.0.1 - 2015-04-13
 * https://github.com/binarystash/custom-checkbox
 * Copyright (c) 2015 BinaryStash; Licensed MIT */
 (function ($) {
@@ -20,8 +20,11 @@
 			var withinLabel = parentLabel.length;
 
 			if ( !withinLabel ){
-				$(v).wrap("<label>");      
+				$(v).wrap("<label class='custom-checkbox-label'></label>");      
 			}  
+			else {
+				parentLabel.addClass('custom-checkbox-label');
+			}
 
 			//Create dummy checkbox
 			var dummy = $("<span class='custom-checkbox-display'></span>");
