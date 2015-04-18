@@ -30,8 +30,7 @@
 			var dummy = $("<span class='custom-checkbox-display'></span>");
 			$(v).after(dummy);
 			if ( $(v).prop("checked") ) {
-				$(v).addClass("custom-checkbox-checked-default");
-				$(v).next('.custom-checkbox-display').addClass("custom-checkbox-checked");
+				$(v).next('.custom-checkbox-display').addClass("custom-checkbox-checked custom-checkbox-checked-default");
 			}
 
 			//Add/remove classes to checkbox whenever state changes
@@ -53,8 +52,8 @@
 				if ( !$(rv).hasClass("custom-checkbox-aware") ) {
 					$(rv).addClass("custom-checkbox-aware");
 					$(rv).click( function() {
-						form.find(".custom-checkbox:checked:not('.custom-checkbox-checked-default')").trigger("click");
-						form.find(".custom-checkbox.custom-checkbox-checked-default").not(":checked").trigger("click");
+						form.find(".custom-checkbox-display").removeClass("custom-checkbox-checked");
+						form.find(".custom-checkbox-display.custom-checkbox-checked-default").addClass("custom-checkbox-checked");
 					});
 				}
 			});
