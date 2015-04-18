@@ -6,7 +6,7 @@ Custom Checkbox is a jQuery plugin for customizing the appearance of checkboxes.
 
 ## Demo
 
-Play with a [fiddle](http://jsfiddle.net/binarystash/B32wj/).
+Play with a [fiddle](http://jsfiddle.net/binarystash/B32wj/) or see a [demo](http://www.binarystash.net/jquery-custom-checkbox).
 
 ## Installation
 
