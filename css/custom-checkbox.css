@@ -23,7 +23,7 @@
 	border:1px solid #9dbcbd;
 }
 
-.custom-checkbox-display.checked {
+.custom-checkbox-display.custom-checkbox-checked {
 	background-image:url("../images/check.png");
 	background-position:center center;
 	background-repeat:no-repeat;

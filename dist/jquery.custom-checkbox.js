@@ -1,4 +1,4 @@
-/*! custom-checkbox - v1.0.1 - 2015-04-13
+/*! custom-checkbox - v1.0.1 - 2015-04-18
 * https://github.com/binarystash/custom-checkbox
 * Copyright (c) 2015 BinaryStash; Licensed MIT */
 (function ($) {
@@ -30,7 +30,8 @@
 			var dummy = $("<span class='custom-checkbox-display'></span>");
 			$(v).after(dummy);
 			if ( $(v).prop("checked") ) {
-				$(v).next('.custom-checkbox-display').addClass("checked");
+				$(v).addClass("custom-checkbox-checked-default");
+				$(v).next('.custom-checkbox-display').addClass("custom-checkbox-checked");
 			}
 
 			//Add/remove classes to checkbox whenever state changes
@@ -38,10 +39,10 @@
 				var checkbox = $(e.currentTarget);
 				var state = checkbox.prop("checked");
 				if ( state ) {
-					dummy.addClass("checked");
+					dummy.addClass("custom-checkbox-checked");
 				}
 				else {
-					dummy.removeClass("checked");
+					dummy.removeClass("custom-checkbox-checked");
 				}
 			});
 
@@ -52,7 +53,8 @@
 				if ( !$(rv).hasClass("custom-checkbox-aware") ) {
 					$(rv).addClass("custom-checkbox-aware");
 					$(rv).click( function() {
-						form.find(".custom-checkbox:checked").trigger("click");
+						form.find(".custom-checkbox:checked:not('.custom-checkbox-checked-default')").trigger("click");
+						form.find(".custom-checkbox.custom-checkbox-checked-default").not(":checked").trigger("click");
 					});
 				}
 			});
