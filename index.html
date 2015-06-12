@@ -46,12 +46,16 @@
 					<li><p><a href="https://github.com/binarystash/jquery-custom-checkbox/archive/master.zip">Download</a> the latest version.</p></li>
 					<li>
 						<p>Include the following.</p>
-						<pre><code class="html">&lt;script src=&quot;dist/custom-checkbox.min.js&quot;&gt;&lt;/script&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/custom-checkbox.css&quot;/&gt;</code></pre>
+{% highlight html %}
+<script src="dist/custom-checkbox.min.js"></script>
+<link rel="stylesheet" href="css/custom-checkbox.css"/>
+{% endhighlight %}		
 					</li>
 					<li>
 						<p>Style checkboxes away.</p>
-						<pre><code class="javascript">jQuery(&#39;input[type=&quot;checkbox&quot;]&#39;).customCheckbox();</code></pre>
+{% highlight js %}						
+jQuery('input[type="checkbox"]').customCheckbox();
+{% endhighlight %}	
 					</li>
 				</ol>
 			</div>
@@ -64,8 +68,5 @@
 		<script type="text/javascript" src="https://rawgit.com/binarystash/jquery-custom-checkbox/master/dist/jquery.custom-checkbox.min.js"></script>
 		
 		<script src="js/main.js"></script>
-    
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
 	</body>
 </html>
