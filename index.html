@@ -1,72 +1,46 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <title>jQuery Custom Checkbox</title>
-        <meta name="description" content=""/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-		
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'/>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css"/>
-		<link rel="stylesheet" href="https://rawgit.com/binarystash/jquery-custom-checkbox/master/css/custom-checkbox.css"/>
-		
-        <link rel="stylesheet" href="css/normalize.min.css"/>
-        <link rel="stylesheet" href="css/main.css"/>
+---
+layout: default
+---
 
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-
-		<div id="showcase-section" class="outer">
-			<div class="inner">
-				<h1>jQuery Custom Checkbox</h1>
-				<p style="text-align:center">Customize the appearance of HTML checkboxes</p>
-				<h3 style="text-align:center">Demo</h3>
-				<form class="demo-form" action="#" method="GET">
-					<fieldset>
-						<div>
-							<input checked type="checkbox" id="first"/><label for="first">Sample 1 (input beside label; label with ID)</label>
-						</div>
-						<div>
-							<label><input id="second" type="checkbox"/>Sample 2 (input inside label)</label>
-						</div>
-						<div>
-							<input id="third" type="checkbox"/><label>Sample 3 (input beside label; label without ID)</label>
-						</div>
-						<div class="control">
-							<input type="reset" value="Reset"/>
-							<input type="reset" value="Submit"/>
-						</div>
-					</fieldset>
-				</form>
-				<h3>Getting started</h3>
-				<ol>
-					<li><p><a href="https://github.com/binarystash/jquery-custom-checkbox/archive/master.zip">Download</a> the latest version.</p></li>
-					<li>
-						<p>Include the following.</p>
+<div id="showcase-section" class="outer">
+	<div class="inner">
+		<h1>jQuery Custom Checkbox</h1>
+		<p style="text-align:center">Customize the appearance of HTML checkboxes</p>
+		<h3 style="text-align:center">Demo</h3>
+		<form class="demo-form" action="#" method="GET">
+			<fieldset>
+				<div>
+					<input checked type="checkbox" id="first"/><label for="first">Sample 1 (input beside label; label with ID)</label>
+				</div>
+				<div>
+					<label><input id="second" type="checkbox"/>Sample 2 (input inside label)</label>
+				</div>
+				<div>
+					<input id="third" type="checkbox"/><label>Sample 3 (input beside label; label without ID)</label>
+				</div>
+				<div class="control">
+					<input type="reset" value="Reset"/>
+					<input type="reset" value="Submit"/>
+				</div>
+			</fieldset>
+		</form>
+		<h3>Getting started</h3>
+		<ol>
+			<li><p><a href="https://github.com/binarystash/jquery-custom-checkbox/archive/master.zip">Download</a> the latest version.</p></li>
+			<li>
+				<p>Include the following.</p>
 {% highlight html %}
 <script src="dist/custom-checkbox.min.js"></script>
 <link rel="stylesheet" href="css/custom-checkbox.css"/>
 {% endhighlight %}		
-					</li>
-					<li>
-						<p>Style checkboxes away.</p>
-{% highlight js %}						
+			</li>
+			<li>
+				<p>Style checkboxes away.</p>
+{% highlight  %}						
 jQuery('input[type="checkbox"]').customCheckbox();
-{% endhighlight %}	
-					</li>
-				</ol>
-			</div>
-		</div>
-		
-		<a href="https://github.com/binarystash/jquery-custom-checkbox"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-		<script type="text/javascript" src="https://rawgit.com/binarystash/jquery-custom-checkbox/master/dist/jquery.custom-checkbox.min.js"></script>
-		
-		<script src="js/main.js"></script>
-	</body>
-</html>
+			</li>
+		</ol>
+	</div>
+</div>
+
+<a href="https://github.com/binarystash/jquery-custom-checkbox"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
